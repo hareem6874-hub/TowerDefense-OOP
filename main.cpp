@@ -72,6 +72,7 @@ int main()
 {
 	RenderWindow window(VideoMode(1200,700), "FIXED TD FINAL");
 	sf::Music bgMusic;
+	sf::Music towerPlaceMusic;
 
 	if (!bgMusic.openFromFile("background-music.ogg"))
 	{
@@ -81,6 +82,14 @@ int main()
 	bgMusic.setLoop(true);
 	bgMusic.setVolume(40);
 	bgMusic.play();
+
+	if (!towerPlaceMusic.openFromFile("tower-place-music.ogg"))
+	{
+		cout << "Music load failed" << endl;
+	}
+
+	towerPlaceMusic.setLoop(false);
+	towerPlaceMusic.setVolume(80);
 
 	window.setFramerateLimit(60);
 
@@ -119,7 +128,7 @@ int main()
 	int enemiesPerWave = 10;
 	int spawned = 0;
 
-	float spawnDelay = 1.0f;
+	float spawnDelay = 1;
 
 	int enemySpawn = 0;
 	int selectedTower = 0;
@@ -215,7 +224,7 @@ int main()
 						{
 							warningText = "Not enough gold!";
 						}
-						warningTimer = 1.5f;
+						warningTimer = 1.5;
 						break;
 					}
 				}
@@ -249,7 +258,7 @@ int main()
 								warningText = "Not enough gold!";
 							}
 
-							warningTimer = 1.5f;
+							warningTimer = 1.5;
 							break;
 						}
 					}
@@ -272,17 +281,17 @@ int main()
 						if(selectedTower==0)
 						{
 							warningText="Select a tower first!";
-							warningTimer=1.5f;
+							warningTimer=1.5;
 						}
 						else if(isOnRoad(y))
 						{
 							warningText="Cannot place on road!";
-							warningTimer=1.5f;
+							warningTimer=1.5;
 						}
 						else if(gold < cost)
 						{
 							warningText="Not enough gold!";
-							warningTimer=1.5f;
+							warningTimer=1.5;
 						}
 						else
 						{
@@ -311,6 +320,7 @@ int main()
 								towers[totalTowers++] = new FireTower(x,y);
 								gold -= 90;
 							}
+                            towerPlaceMusic.play();
 						}
 					}
 				}
@@ -433,7 +443,7 @@ int main()
 			splitCounter=0;
 
 			enemiesPerWave += 5;
-			spawnDelay *= 0.95f;
+			spawnDelay *= 0.95;
 		}
 
 		//  LOSE

@@ -50,7 +50,7 @@ public:
     void applySlow(float factor) 
     {
         speed = originalSpeed * factor;
-        slowTimer = 1.0f;
+        slowTimer = 1;
     }
 
     void takeDamage(int dmg) 

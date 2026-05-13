@@ -10,7 +10,7 @@ public:
     {
         damage = 50;
         range = 170;
-        fireRate = 1.5f;
+        fireRate = 1.5;
 
         body.setSize(Vector2f(50, 50));
         body.setFillColor(Color::Blue);
@@ -46,8 +46,8 @@ public:
     
         range += 25;
     
-        if (fireRate > 0.4f)
-            fireRate -= 0.1f;
+        if (fireRate > 0.4)
+            fireRate -= 0.1;
     
         upgradeCost += 60;
     }

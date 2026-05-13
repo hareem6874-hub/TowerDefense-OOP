@@ -10,7 +10,7 @@ public:
     {
         damage = 10;
         range = 130;
-        fireRate = 0.2f;
+        fireRate = 0.2;
 
         body.setSize(Vector2f(40, 40));
         body.setFillColor(Color::Green);
@@ -44,8 +44,8 @@ public:
     
         damage += 5;
     
-        if (fireRate > 0.05f)
-            fireRate -= 0.02f;
+        if (fireRate > 0.05)
+            fireRate -= 0.02;
     
         range += 10;
     

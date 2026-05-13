@@ -12,7 +12,7 @@ public:
         hp = 150;
         maxHp = 150;
 
-        body.setSize(sf::Vector2f(45, 45));
+        body.setSize(Vector2f(45, 45));
         body.setFillColor(sf::Color::Black);
         body.setPosition(0, y);
     }

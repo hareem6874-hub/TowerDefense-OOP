@@ -30,7 +30,7 @@ public:
             float dy = enemies[i]->getPos().y - body.getPosition().y;
             if (dx * dx + dy * dy <= range * range) 
             {
-                enemies[i]->applySlow(0.5f);
+                enemies[i]->applySlow(0.5);
             }
         }
 
