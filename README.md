@@ -61,4 +61,30 @@ It was developed as a semester project.
 3. Make sure all `.h` files are in same folder
 4. Run the executable
 
-Example (Linux/Mac):
+---
+
+## Notes
+
+- Make sure `arial.ttf` is in the project folder
+- Make sure `background.ogg` is present for music
+- Make sure `highscore.txt` exists (or it will be created automatically)
+
+---
+
+## Author
+
+This game was created as a learning project for understanding:
+- Object Oriented Programming
+- Game loops
+- Inheritance
+- SFML basics
+
+---
+
+## Future Improvements
+
+- Better graphics
+- More enemy types
+- More tower abilities
+- Map levels
+- Sound effects
